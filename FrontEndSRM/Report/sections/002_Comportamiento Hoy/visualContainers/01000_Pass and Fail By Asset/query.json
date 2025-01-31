@@ -1,0 +1,267 @@
+{
+  "Commands": [
+    {
+      "SemanticQueryDataShapeCommand": {
+        "Query": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "a",
+              "Entity": "Assets",
+              "Type": 0
+            },
+            {
+              "Name": "b",
+              "Entity": "BIV_CalendarDates",
+              "Type": 0
+            },
+            {
+              "Name": "s",
+              "Entity": "SRMP_RawDataSummarized",
+              "Type": 0
+            },
+            {
+              "Name": "y",
+              "Entity": "YieldByAssetByDate",
+              "Type": 0
+            },
+            {
+              "Name": "s1",
+              "Entity": "SRMP_DailyGoalLog",
+              "Type": 0
+            },
+            {
+              "Name": "b1",
+              "Entity": "BIV_DimDateFilter",
+              "Type": 0
+            }
+          ],
+          "Select": [
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "b"
+                  }
+                },
+                "Property": "Date"
+              },
+              "Name": "BIV_CalendarDates.Date",
+              "NativeReferenceName": "Date"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "a"
+                  }
+                },
+                "Property": "AssetName"
+              },
+              "Name": "Assets.AssetName",
+              "NativeReferenceName": "AssetName"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "s"
+                      }
+                    },
+                    "Property": "Fail"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(SRMP_RawDataSummarized.Fail)",
+              "NativeReferenceName": "AssetName1"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "s"
+                      }
+                    },
+                    "Property": "Pass"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(SRMP_RawDataSummarized.Pass)",
+              "NativeReferenceName": "Sum of Fail"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "y"
+                      }
+                    },
+                    "Property": "YieldByAssetByDate"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(YieldByAssetByDate.YieldByAssetByDate)",
+              "NativeReferenceName": "YieldByAssetByDate"
+            },
+            {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s1"
+                  }
+                },
+                "Property": "CurrentGoalByHour"
+              },
+              "Name": "SRMP_DailyGoalLog.CurrentGoalByHour",
+              "NativeReferenceName": "CurrentGoalByHour"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "s"
+                      }
+                    },
+                    "Property": "TestedQuantity"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(SRMP_RawDataSummarized.TestedQuantity)",
+              "NativeReferenceName": "Sum of TestedQuantity"
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "b1"
+                          }
+                        },
+                        "Property": "Period"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Hoy'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            },
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "a"
+                              }
+                            },
+                            "Property": "AssetName"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ],
+          "OrderBy": [
+            {
+              "Direction": 1,
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "b"
+                    }
+                  },
+                  "Property": "Date"
+                }
+              }
+            },
+            {
+              "Direction": 1,
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "a"
+                    }
+                  },
+                  "Property": "AssetName"
+                }
+              }
+            }
+          ]
+        },
+        "Binding": {
+          "Primary": {
+            "Groupings": [
+              {
+                "Projections": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ]
+              }
+            ]
+          },
+          "DataReduction": {
+            "DataVolume": 4,
+            "Primary": {
+              "Window": {
+                "Count": 1000
+              }
+            }
+          },
+          "SuppressedJoinPredicates": [
+            6
+          ],
+          "Version": 1
+        },
+        "ExecutionMetricsKind": 1
+      }
+    }
+  ]
+}

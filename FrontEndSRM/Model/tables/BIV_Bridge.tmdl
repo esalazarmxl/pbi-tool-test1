@@ -25,7 +25,5 @@
 				in
 				    dbo_BIV_Bridge4DimDate
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
 

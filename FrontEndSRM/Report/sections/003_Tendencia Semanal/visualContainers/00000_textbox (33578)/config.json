@@ -43,14 +43,14 @@
                     "value": "\t\t\t"
                   },
                   {
-                    "value": "Periodo:\t\t\t\t\t\t\t\t\t     Turno: ",
+                    "value": "Periodo:\t\t\t\t\t\t\t\t\t     ",
                     "textStyle": {
                       "fontWeight": "bold",
                       "color": "#808080"
                     }
                   },
                   {
-                    "value": "\t\t\t\t\t\t\t\t"
+                    "value": "\t\t\t\t\t"
                   }
                 ]
               }

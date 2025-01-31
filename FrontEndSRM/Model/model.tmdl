@@ -10,7 +10,7 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBIDesktopVersion = 2.123.742.0 (23.11)
 
-annotation PBI_QueryOrder = ["SRMP_DailyGoalLog","Assets","DayHours","BIV_Bridge","BIV_DimDateFilter","SRMP_RawDataSummarized","TestResult","TesterType","Site","Shift","YieldBySiteByHour","YieldBySiteByDate","YieldByAssetByHour","YieldByAssetByDate","ShiftHours","BIV_CalendarDates","ProdType"]
+annotation PBI_QueryOrder = ["SRMP_DailyGoalLog","Assets","DayHours","BIV_Bridge","BIV_DimDateFilter","SRMP_RawDataSummarized","TestResult","TesterType","Site","Shift","YieldBySiteByHour","YieldBySiteByDate","YieldByAssetByHour","YieldByAssetByDate","ShiftHours","BIV_CalendarDates","ProdType","BIV_Bridge4DimDate"]
 
 ref table DateTableTemplate_97596cfd-c2f3-4bd0-bb29-7be89706f3f7
 ref table SRMP_DailyGoalLog
@@ -45,6 +45,7 @@ ref table LocalDateTable_4f620a39-c6d5-4101-a4b5-7252c0bf4669
 ref table LocalDateTable_c97ca8a6-3dd6-4cd6-9161-1e0699efd275
 ref table LocalDateTable_00bee1dd-6a91-432e-a06f-13ffe99a58d2
 ref table LocalDateTable_27ecb91d-283a-4a42-b0c2-f085e22b4043
+ref table BIV_Bridge4DimDate
 
 ref cultureInfo en-US
 
