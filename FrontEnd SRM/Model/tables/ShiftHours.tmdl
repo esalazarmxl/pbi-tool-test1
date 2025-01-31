@@ -1,0 +1,30 @@
+﻿table ShiftHours
+
+	column Shift
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Shift
+
+		annotation SummarizationSetBy = Automatic
+
+	column Hour
+		dataType: dateTime
+		formatString: Long Time
+		summarizeBy: none
+		sourceColumn: Hour
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	partition ShiftHours-f17d568d-c1c9-4534-aff6-81b3efbab865 = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("bdA7DkBAGEXhvfy14s6Mx7AAG1BOVCg0JNh/RCQijvYrTm5uStbO235YZiobyfrsJRUkQuqvOEEcxEMCJIcUEGx2z+ZuGtZlvCiSapAXyZE8KYDEltgSW/pp5aT7h/4E", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Shift = _t, Hour = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Shift", type text}, {"Hour", type time}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

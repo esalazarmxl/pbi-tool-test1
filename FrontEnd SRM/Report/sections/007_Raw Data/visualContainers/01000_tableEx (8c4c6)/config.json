@@ -1,0 +1,331 @@
+{
+  "name": "8c4c6c69fd76fa6876f0",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 0,
+        "y": 131.70731707317074,
+        "z": 2000,
+        "width": 1280.1951219512196,
+        "height": 578.63414634146341,
+        "tabOrder": 1000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "tableEx",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "Assets.AssetName"
+        },
+        {
+          "queryRef": "SRMP_RawDataSummarized.LotNumber"
+        },
+        {
+          "queryRef": "SRMP_RawDataSummarized.PartNumber"
+        },
+        {
+          "queryRef": "SRMP_RawDataSummarized.TestDate"
+        },
+        {
+          "queryRef": "SRMP_RawDataSummarized.DateByTurn"
+        },
+        {
+          "queryRef": "SRMP_RawDataSummarized.TestHour"
+        },
+        {
+          "queryRef": "Sum(SRMP_RawDataSummarized.ShiftGoal)"
+        },
+        {
+          "queryRef": "Sum(SRMP_RawDataSummarized.Goal)"
+        },
+        {
+          "queryRef": "SRMP_RawDataSummarized.Prod"
+        },
+        {
+          "queryRef": "SRMP_RawDataSummarized.week"
+        },
+        {
+          "queryRef": "SRMP_RawDataSummarized.TesterType"
+        },
+        {
+          "queryRef": "SRMP_RawDataSummarized.Site"
+        },
+        {
+          "queryRef": "SRMP_RawDataSummarized.Ecode"
+        },
+        {
+          "queryRef": "SRMP_RawDataSummarized.TestResult"
+        },
+        {
+          "queryRef": "SRMP_RawDataSummarized.TestMode"
+        },
+        {
+          "queryRef": "SRMP_RawDataSummarized.Shift"
+        },
+        {
+          "queryRef": "Sum(SRMP_RawDataSummarized.TestedQuantity)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "s",
+          "Entity": "SRMP_RawDataSummarized",
+          "Type": 0
+        },
+        {
+          "Name": "a",
+          "Entity": "Assets",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "LotNumber"
+          },
+          "Name": "SRMP_RawDataSummarized.LotNumber",
+          "NativeReferenceName": "LotNumber"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "PartNumber"
+          },
+          "Name": "SRMP_RawDataSummarized.PartNumber",
+          "NativeReferenceName": "PartNumber"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "TestDate"
+          },
+          "Name": "SRMP_RawDataSummarized.TestDate",
+          "NativeReferenceName": "TestDate"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "TestHour"
+          },
+          "Name": "SRMP_RawDataSummarized.TestHour",
+          "NativeReferenceName": "TestHour"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s"
+                  }
+                },
+                "Property": "ShiftGoal"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(SRMP_RawDataSummarized.ShiftGoal)",
+          "NativeReferenceName": "ShiftGoal"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s"
+                  }
+                },
+                "Property": "Goal"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(SRMP_RawDataSummarized.Goal)",
+          "NativeReferenceName": "Goal"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "Prod"
+          },
+          "Name": "SRMP_RawDataSummarized.Prod",
+          "NativeReferenceName": "Prod"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "week"
+          },
+          "Name": "SRMP_RawDataSummarized.week",
+          "NativeReferenceName": "week"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "TesterType"
+          },
+          "Name": "SRMP_RawDataSummarized.TesterType",
+          "NativeReferenceName": "TesterType"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "Site"
+          },
+          "Name": "SRMP_RawDataSummarized.Site",
+          "NativeReferenceName": "Site"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "Ecode"
+          },
+          "Name": "SRMP_RawDataSummarized.Ecode",
+          "NativeReferenceName": "Ecode"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "TestResult"
+          },
+          "Name": "SRMP_RawDataSummarized.TestResult",
+          "NativeReferenceName": "TestResult"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "TestMode"
+          },
+          "Name": "SRMP_RawDataSummarized.TestMode",
+          "NativeReferenceName": "TestMode"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "Shift"
+          },
+          "Name": "SRMP_RawDataSummarized.Shift",
+          "NativeReferenceName": "Shift"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s"
+                  }
+                },
+                "Property": "TestedQuantity"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(SRMP_RawDataSummarized.TestedQuantity)",
+          "NativeReferenceName": "TestedQuantity"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "a"
+              }
+            },
+            "Property": "AssetName"
+          },
+          "Name": "Assets.AssetName",
+          "NativeReferenceName": "AssetName"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "DateByTurn"
+          },
+          "Name": "SRMP_RawDataSummarized.DateByTurn",
+          "NativeReferenceName": "DateByTurn"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Aggregation": {
+              "Expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Source": "s"
+                    }
+                  },
+                  "Property": "ShiftGoal"
+                }
+              },
+              "Function": 0
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

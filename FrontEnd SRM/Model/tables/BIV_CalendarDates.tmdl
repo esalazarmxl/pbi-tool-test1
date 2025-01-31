@@ -1,0 +1,192 @@
+﻿table BIV_CalendarDates
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column Qtr
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Qtr
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column Week
+		dataType: int64
+		formatString: 0
+		summarizeBy: sum
+		sourceColumn: Week
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: mm/dd/yyyy
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 201a1284-9a9e-45d8-b6c2-aa142d29c204
+			defaultHierarchy: LocalDateTable_70febeb6-95fb-4616-a12e-54e0eb0c8d5e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column MoKey
+		dataType: int64
+		formatString: 0
+		summarizeBy: count
+		sourceColumn: MoKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column MoDescription
+		dataType: string
+		summarizeBy: none
+		sourceColumn: MoDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column WkKey
+		dataType: int64
+		formatString: 0
+		summarizeBy: count
+		sourceColumn: WkKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekStartDate
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: WeekStartDate
+
+		variation Variation
+			isDefault
+			relationship: a02bd3b5-7e0c-447c-9327-3b9714a8e7f3
+			defaultHierarchy: LocalDateTable_0faa3352-af2f-470b-b1e3-733f422cb219.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Month_Desc
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Month_Desc
+
+		annotation SummarizationSetBy = Automatic
+
+	column Holiday_Flag
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Holiday_Flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthStartDate
+		dataType: dateTime
+		formatString: General Date
+		summarizeBy: none
+		sourceColumn: MonthStartDate
+
+		variation Variation
+			isDefault
+			relationship: efbd7b8c-e70c-4a49-9554-c474b479bc4d
+			defaultHierarchy: LocalDateTable_efae143c-f57d-433d-9a26-39a868837b25.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_sortable
+		dataType: string
+		summarizeBy: none
+		sourceColumn: month_sortable
+
+		annotation SummarizationSetBy = Automatic
+
+	column QtrKey
+		dataType: int64
+		formatString: 0
+		summarizeBy: count
+		sourceColumn: QtrKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearQtr
+		dataType: string
+		summarizeBy: none
+		sourceColumn: YearQtr
+
+		annotation SummarizationSetBy = Automatic
+
+	column Start_Month_Date
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: Start_Month_Date
+
+		variation Variation
+			isDefault
+			relationship: 132b56df-b550-43cc-b945-e1d73b80211d
+			defaultHierarchy: LocalDateTable_a95d282e-ef45-4d8b-a23d-6f95f4325843.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column End_Month_Date
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: End_Month_Date
+
+		variation Variation
+			isDefault
+			relationship: b84d0454-d5ed-4110-a92f-e2dde9e592f2
+			defaultHierarchy: LocalDateTable_0c8d9388-0fc3-401d-8396-869863542a6e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition BIV_CalendarDates-69285d89-42fa-4d6e-9234-b9dc5e9bb27b = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("Memexpsql08", "Engineering"),
+				    dbo_BIV_CalendarDates = Source{[Schema="dbo",Item="BIV_CalendarDates"]}[Data]
+				in
+				    dbo_BIV_CalendarDates
+
+	annotation PBI_ResultType = Table
+

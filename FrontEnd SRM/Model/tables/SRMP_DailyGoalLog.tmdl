@@ -1,0 +1,143 @@
+﻿table SRMP_DailyGoalLog
+
+	measure CurrentGoalByHour = ```
+			
+			var vhour = switch( hour(NOW()), 
+			6, 1,
+			7, 2,
+			8, 3,
+			9, 4,
+			10, 5,
+			11, 6,
+			12, 7,
+			13, 8,
+			14, 9,
+			15, 10,
+			16, 11,
+			17, 12,
+			18, 13,
+			19, 14,
+			20, 15,
+			21, 16,
+			22, 17,
+			23, 18,
+			0, 19,
+			1, 20,
+			2, 21,
+			3, 22,
+			4, 23,
+			5, 24)
+			return CALCULATE(DIVIDE(min(SRMP_DailyGoalLog[DailyGoal]), 24) * (vhour - 7))
+			```
+		formatString: #,0
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure TodayDailyGoal = Calculate(Sum(SRMP_DailyGoalLog[DailyGoal]),REMOVEFILTERS(BIV_DimDateFilter[Period]), REMOVEFILTERS(BIV_CalendarDates[Date]),FILTER(BIV_DimDateFilter,BIV_DimDateFilter[Period] = "Today"))
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DailyGoalLogId
+		dataType: int64
+		formatString: 0
+		summarizeBy: count
+		sourceColumn: DailyGoalLogId
+
+		annotation SummarizationSetBy = Automatic
+
+	column DailyGoal
+		dataType: double
+		summarizeBy: none
+		sourceColumn: DailyGoal
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Asset
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Asset
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssetName
+		dataType: string
+		summarizeBy: none
+		sourceColumn: AssetName
+
+		annotation SummarizationSetBy = Automatic
+
+	column TesterType
+		dataType: string
+		summarizeBy: none
+		sourceColumn: TesterType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ecodes
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Ecodes
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedOn
+		dataType: dateTime
+		formatString: General Date
+		summarizeBy: none
+		sourceColumn: CreatedOn
+
+		variation Variation
+			isDefault
+			relationship: ab5e65f6-5349-4e9e-b804-fda8920fefa8
+			defaultHierarchy: LocalDateTable_82da22bf-db83-4241-ab72-ad09a4ff4ba6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedBy
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CreatedBy
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedOn
+		dataType: dateTime
+		formatString: General Date
+		summarizeBy: none
+		sourceColumn: UpdatedOn
+
+		variation Variation
+			isDefault
+			relationship: e27fb84c-24db-4b98-b5b8-c839b441bb7d
+			defaultHierarchy: LocalDateTable_2eb026ad-0aea-46f1-b054-10c7417107aa.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedBy
+		dataType: string
+		summarizeBy: none
+		sourceColumn: UpdatedBy
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SRMP_DailyGoalLog-41966f8f-2ef9-4ddf-9f1f-96d356e8b255 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("memexpsql08", "Engineering"),
+				    dbo_SRMP_DailyGoalLog = Source{[Schema="dbo",Item="SRMP_DailyGoalLog"]}[Data]
+				in
+				    dbo_SRMP_DailyGoalLog
+
+	annotation PBI_ResultType = Table
+

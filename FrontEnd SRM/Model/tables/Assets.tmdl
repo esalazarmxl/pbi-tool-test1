@@ -1,0 +1,44 @@
+﻿table Assets
+
+	column Asset
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Asset
+
+		annotation SummarizationSetBy = Automatic
+
+	column AssetName
+		dataType: string
+		summarizeBy: none
+		sourceColumn: AssetName
+
+		annotation SummarizationSetBy = Automatic
+
+	column TesterType
+		dataType: string
+		summarizeBy: none
+		sourceColumn: TesterType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Active
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		summarizeBy: none
+		sourceColumn: Active
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Assets-ea0b6668-d247-4bcb-a41e-45b731042fce = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("memexpsql08", "Engineering"),
+				    dbo_SRMP_DailyGoal = Source{[Schema="dbo",Item="SRMP_DailyGoal"]}[Data],
+				    #"Removed Other Columns" = Table.SelectColumns(dbo_SRMP_DailyGoal,{"Asset", "AssetName", "TesterType", "Active"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Removed Other Columns", each [Active] = true)
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_ResultType = Table
+

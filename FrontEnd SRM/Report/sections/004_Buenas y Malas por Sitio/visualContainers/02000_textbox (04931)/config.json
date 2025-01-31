@@ -1,0 +1,21 @@
+{
+  "name": "049314771276dd47bc40",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 100,
+        "y": 54.397076735688181,
+        "width": 300,
+        "height": 300,
+        "z": 11003,
+        "tabOrder": 2000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "textbox",
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "13ff02048e2ee3699713"
+}

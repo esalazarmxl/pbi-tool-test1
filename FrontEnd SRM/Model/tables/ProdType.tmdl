@@ -1,0 +1,21 @@
+﻿table ProdType
+
+	column Prod
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Prod
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ProdType-098947fa-27b0-4fe4-a14a-7a9b66820b6c = m
+		mode: import
+		source =
+				let
+				    Source = SRMP_RawDataSummarized,
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"Prod"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns")
+				in
+				    #"Removed Duplicates"
+
+	annotation PBI_ResultType = Table
+

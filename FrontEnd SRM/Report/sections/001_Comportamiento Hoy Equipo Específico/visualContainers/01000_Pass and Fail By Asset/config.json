@@ -1,0 +1,544 @@
+{
+  "name": "555e4efd78c0e79dab53",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 0,
+        "y": 208.09756097560975,
+        "z": 1000,
+        "width": 1280.1951219512196,
+        "height": 502.2439024390244,
+        "tabOrder": 1000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "lineStackedColumnComboChart",
+    "projections": {
+      "Category": [
+        {
+          "queryRef": "BIV_CalendarDates.Date",
+          "active": true
+        },
+        {
+          "queryRef": "Assets.AssetName",
+          "active": true
+        }
+      ],
+      "Y": [
+        {
+          "queryRef": "Sum(SRMP_RawDataSummarized.Fail)"
+        },
+        {
+          "queryRef": "Sum(SRMP_RawDataSummarized.Pass)"
+        }
+      ],
+      "Y2": [
+        {
+          "queryRef": "Sum(YieldByAssetByDate.YieldByAssetByDate)"
+        }
+      ],
+      "Tooltips": [
+        {
+          "queryRef": "CountNonNull(SRMP_RawDataSummarized.TestedQuantity)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "s",
+          "Entity": "SRMP_RawDataSummarized",
+          "Type": 0
+        },
+        {
+          "Name": "a",
+          "Entity": "Assets",
+          "Type": 0
+        },
+        {
+          "Name": "y",
+          "Entity": "YieldByAssetByDate",
+          "Type": 0
+        },
+        {
+          "Name": "b",
+          "Entity": "BIV_CalendarDates",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "a"
+              }
+            },
+            "Property": "AssetName"
+          },
+          "Name": "Assets.AssetName",
+          "NativeReferenceName": "AssetName"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s"
+                  }
+                },
+                "Property": "Fail"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(SRMP_RawDataSummarized.Fail)",
+          "NativeReferenceName": "AssetName1"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s"
+                  }
+                },
+                "Property": "Pass"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(SRMP_RawDataSummarized.Pass)",
+          "NativeReferenceName": "Sum of Fail"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "y"
+                  }
+                },
+                "Property": "YieldByAssetByDate"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(YieldByAssetByDate.YieldByAssetByDate)",
+          "NativeReferenceName": "YieldByAssetByDate"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "b"
+              }
+            },
+            "Property": "Date"
+          },
+          "Name": "BIV_CalendarDates.Date",
+          "NativeReferenceName": "Date"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "s"
+                  }
+                },
+                "Property": "TestedQuantity"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "CountNonNull(SRMP_RawDataSummarized.TestedQuantity)",
+          "NativeReferenceName": "Sum of TestedQuantity"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 1,
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "b"
+                }
+              },
+              "Property": "Date"
+            }
+          }
+        },
+        {
+          "Direction": 1,
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "a"
+                }
+              },
+              "Property": "AssetName"
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "hasDefaultSort": true,
+    "objects": {
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 9,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "PassAndFailedBySite"
+                          }
+                        },
+                        "Property": "DUT_Bin_Result"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'F'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#00B02F'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "PassAndFailedBySite"
+                          }
+                        },
+                        "Property": "DUT_Bin_Result"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'P'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {}
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D64550'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "PassAndFailedBySite"
+                          }
+                        },
+                        "Property": "TestResult"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Fail'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#00A14E'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "PassAndFailedBySite"
+                          }
+                        },
+                        "Property": "TestResult"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Pass'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 9,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "CountNonNull(SRMP_RawDataSummarized.Fail)"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#119E4E'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "CountNonNull(SRMP_RawDataSummarized.Pass)"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 9,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(SRMP_RawDataSummarized.Fail)"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#119E40'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(SRMP_RawDataSummarized.Pass)"
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "reverseStackOrder": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "zoom": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "lineStyles": [
+        {
+          "properties": {
+            "strokeWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "5L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "totals": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "layout": [
+        {
+          "properties": {
+            "seriesOrderReversed": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Pass and Fail By Asset'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

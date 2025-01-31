@@ -1,0 +1,50 @@
+﻿model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.139.2054.0 (24.12)+334ca1c95b576cc53924655643b0d36f21caac55
+
+annotation PBI_QueryOrder = ["SRMP_DailyGoalLog","Assets","DayHours","BIV_Bridge4DimDate","BIV_DimDateFilter","SRMP_RawDataSummarized","TestResult","TesterType","Site","Shift","YieldBySiteByHour","YieldBySiteByDate","YieldByAssetByHour","YieldByAssetByDate","ShiftHours","BIV_CalendarDates","ProdType"]
+
+ref table DateTableTemplate_97596cfd-c2f3-4bd0-bb29-7be89706f3f7
+ref table SRMP_DailyGoalLog
+ref table LocalDateTable_2eb026ad-0aea-46f1-b054-10c7417107aa
+ref table Assets
+ref table DayHours
+ref table LocalDateTable_82da22bf-db83-4241-ab72-ad09a4ff4ba6
+ref table BIV_Bridge4DimDate
+ref table BIV_DimDateFilter
+ref table SRMP_RawDataSummarized
+ref table LocalDateTable_bfc937ae-0af3-43de-87c5-684d86ad07d8
+ref table TestResult
+ref table TesterType
+ref table Site
+ref table Shift
+ref table YieldBySiteByHour
+ref table YieldBySiteByDate
+ref table YieldByAssetByHour
+ref table YieldByAssetByDate
+ref table ShiftHours
+ref table LocalDateTable_bcd2e266-8e16-42c6-bb24-2b21b7029177
+ref table LocalDateTable_fd7f0bec-f4c0-4db2-bfe4-1a84398b70de
+ref table BIV_CalendarDates
+ref table LocalDateTable_0faa3352-af2f-470b-b1e3-733f422cb219
+ref table LocalDateTable_efae143c-f57d-433d-9a26-39a868837b25
+ref table LocalDateTable_a95d282e-ef45-4d8b-a23d-6f95f4325843
+ref table LocalDateTable_0c8d9388-0fc3-401d-8396-869863542a6e
+ref table ProdType
+ref table LocalDateTable_4bc8e1ed-e634-4f5e-a580-501a48933c87
+ref table LocalDateTable_70febeb6-95fb-4616-a12e-54e0eb0c8d5e
+ref table LocalDateTable_4f620a39-c6d5-4101-a4b5-7252c0bf4669
+ref table LocalDateTable_c97ca8a6-3dd6-4cd6-9161-1e0699efd275
+ref table LocalDateTable_00bee1dd-6a91-432e-a06f-13ffe99a58d2
+ref table LocalDateTable_27ecb91d-283a-4a42-b0c2-f085e22b4043
+
+ref cultureInfo en-US
+

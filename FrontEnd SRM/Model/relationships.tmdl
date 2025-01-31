@@ -1,0 +1,190 @@
+﻿relationship e27fb84c-24db-4b98-b5b8-c839b441bb7d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SRMP_DailyGoalLog.UpdatedOn
+	toColumn: LocalDateTable_2eb026ad-0aea-46f1-b054-10c7417107aa.Date
+
+relationship cd0ba5b0-88cf-40fd-bf4b-7b0e89f800bc
+	fromColumn: SRMP_DailyGoalLog.Asset
+	toColumn: Assets.Asset
+
+relationship ab5e65f6-5349-4e9e-b804-fda8920fefa8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SRMP_DailyGoalLog.CreatedOn
+	toColumn: LocalDateTable_82da22bf-db83-4241-ab72-ad09a4ff4ba6.Date
+
+relationship eedf163c-0ab8-44e1-aaf2-fe1f5ee5f7e7
+	fromColumn: BIV_Bridge4DimDate._PeriodKey
+	toColumn: BIV_DimDateFilter._PeriodKey
+
+relationship cffc78a7-b799-48e9-a473-1ae713d62c90
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SRMP_RawDataSummarized.TestDate
+	toColumn: LocalDateTable_bfc937ae-0af3-43de-87c5-684d86ad07d8.Date
+
+relationship 38a39250-62e2-4c35-9e67-b9e681c5d195
+	fromColumn: SRMP_RawDataSummarized.Asset
+	toColumn: Assets.Asset
+
+relationship 0f4c058a-9a01-4c72-b0ea-31e516ebd525
+	fromColumn: SRMP_RawDataSummarized.TestHour
+	toColumn: DayHours.Hour
+
+relationship b062bcf3-8f02-4166-aa11-7f8211a55a8e
+	fromColumn: SRMP_DailyGoalLog.TesterType
+	toColumn: TesterType.TesterType
+
+relationship 97f2fad1-c9f7-4c6a-bf71-3cf231f21606
+	isActive: false
+	fromColumn: Assets.TesterType
+	toColumn: TesterType.TesterType
+
+relationship e2a8bfc5-e05a-4bda-8ab7-93e76e3fc633
+	fromColumn: SRMP_RawDataSummarized.TesterType
+	toColumn: TesterType.TesterType
+
+relationship 72eae9e8-c497-461d-9136-9b271045f2e5
+	fromColumn: SRMP_RawDataSummarized.Site
+	toColumn: Site.Site
+
+relationship 1f696cb0-2ef4-45f4-b1d3-7cb4599a4252
+	fromColumn: SRMP_RawDataSummarized.TestResult
+	toColumn: TestResult.TestResult
+
+relationship 6422d9f6-4d9f-4113-b80f-26b5e432521e
+	fromColumn: SRMP_RawDataSummarized.Shift
+	toColumn: Shift.Shift
+
+relationship 90259ecd-dcd8-4742-a512-b2dbe3a8c8c8
+	fromColumn: YieldBySiteByHour.Asset
+	toColumn: Assets.Asset
+
+relationship daf0111d-77bb-4acd-aabf-0f7a9e8b8a6e
+	fromColumn: YieldBySiteByDate.Asset
+	toColumn: Assets.Asset
+
+relationship 337e3040-2405-4799-9d22-a3be63ad9999
+	fromColumn: YieldByAssetByHour.Asset
+	toColumn: Assets.Asset
+
+relationship 9e0e426a-ec5f-4985-89be-0dc423f21907
+	fromColumn: YieldByAssetByDate.Asset
+	toColumn: Assets.Asset
+
+relationship 7d134ac1-0e32-4c97-9d6e-08109bd31644
+	fromColumn: YieldBySiteByHour.Site
+	toColumn: Site.Site
+
+relationship 225a9a5a-d266-41bd-b17a-e28354c33747
+	fromColumn: YieldBySiteByDate.Site
+	toColumn: Site.Site
+
+relationship 0a3e4215-45c3-4251-98ef-9e4f6368361f
+	fromColumn: YieldBySiteByHour.TestHour
+	toColumn: DayHours.Hour
+
+relationship 1deb2823-c9db-4b7a-94f2-ec576af155d7
+	fromColumn: YieldByAssetByHour.TestHour
+	toColumn: DayHours.Hour
+
+relationship fb663443-68b0-4a2d-ab00-c5632661f567
+	fromColumn: ShiftHours.Shift
+	toColumn: Shift.Shift
+
+relationship 7a83e64c-b23b-4ab6-a5e1-8d32c82ab47e
+	crossFilteringBehavior: bothDirections
+	fromColumn: ShiftHours.Hour
+	toColumn: DayHours.Hour
+
+relationship 70b40b61-93a5-476a-86d1-334bcd3cecbc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SRMP_RawDataSummarized.CreatedOn
+	toColumn: LocalDateTable_bcd2e266-8e16-42c6-bb24-2b21b7029177.Date
+
+relationship 612c4231-240a-4af1-9fe8-ef1d3f2b1916
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SRMP_RawDataSummarized.UpdatedOn
+	toColumn: LocalDateTable_fd7f0bec-f4c0-4db2-bfe4-1a84398b70de.Date
+
+relationship a02bd3b5-7e0c-447c-9327-3b9714a8e7f3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: BIV_CalendarDates.WeekStartDate
+	toColumn: LocalDateTable_0faa3352-af2f-470b-b1e3-733f422cb219.Date
+
+relationship efbd7b8c-e70c-4a49-9554-c474b479bc4d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: BIV_CalendarDates.MonthStartDate
+	toColumn: LocalDateTable_efae143c-f57d-433d-9a26-39a868837b25.Date
+
+relationship 132b56df-b550-43cc-b945-e1d73b80211d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: BIV_CalendarDates.Start_Month_Date
+	toColumn: LocalDateTable_a95d282e-ef45-4d8b-a23d-6f95f4325843.Date
+
+relationship b84d0454-d5ed-4110-a92f-e2dde9e592f2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: BIV_CalendarDates.End_Month_Date
+	toColumn: LocalDateTable_0c8d9388-0fc3-401d-8396-869863542a6e.Date
+
+relationship fcbb2cd0-8980-45ad-9f54-7e812940224e
+	fromColumn: SRMP_DailyGoalLog.DateKey
+	toColumn: BIV_CalendarDates.DateKey
+
+relationship 0f27b257-982b-4e02-bcca-b0c6e0951ffa
+	crossFilteringBehavior: bothDirections
+	fromColumn: BIV_Bridge4DimDate.DateKey
+	toColumn: BIV_CalendarDates.DateKey
+
+relationship d7354894-761c-4d51-90e2-48da9c3b82c2
+	fromColumn: SRMP_RawDataSummarized.Prod
+	toColumn: ProdType.Prod
+
+relationship 1e4d233a-b725-479e-ae90-1dc4a3d0c519
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SRMP_RawDataSummarized.DateByTurn
+	toColumn: LocalDateTable_4bc8e1ed-e634-4f5e-a580-501a48933c87.Date
+
+relationship ea42087c-58a7-4fc3-bcb5-73c172bab4e7
+	fromColumn: SRMP_RawDataSummarized.DateKeyByTurn
+	toColumn: BIV_CalendarDates.DateKey
+
+relationship 201a1284-9a9e-45d8-b6c2-aa142d29c204
+	joinOnDateBehavior: datePartOnly
+	fromColumn: BIV_CalendarDates.Date
+	toColumn: LocalDateTable_70febeb6-95fb-4616-a12e-54e0eb0c8d5e.Date
+
+relationship beca4821-6b9f-4727-a0c3-646379d69cc0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: YieldBySiteByHour.DateByTurn
+	toColumn: LocalDateTable_4f620a39-c6d5-4101-a4b5-7252c0bf4669.Date
+
+relationship 0e65d1f7-4444-44ec-9481-bade4f25135a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: YieldBySiteByDate.DateByTurn
+	toColumn: LocalDateTable_c97ca8a6-3dd6-4cd6-9161-1e0699efd275.Date
+
+relationship c0a6b2d8-cde6-458f-9dbf-2390339906cd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: YieldByAssetByHour.DateByTurn
+	toColumn: LocalDateTable_00bee1dd-6a91-432e-a06f-13ffe99a58d2.Date
+
+relationship 99bb7e40-6f75-4ea2-baf4-fc9894bf2981
+	joinOnDateBehavior: datePartOnly
+	fromColumn: YieldByAssetByDate.DateByTurn
+	toColumn: LocalDateTable_27ecb91d-283a-4a42-b0c2-f085e22b4043.Date
+
+relationship 2ec5cad7-2f08-47fc-a7f3-8c07807d60ea
+	fromColumn: YieldBySiteByDate.DateKeyByTurn
+	toColumn: BIV_CalendarDates.DateKey
+
+relationship 89aad49a-d29e-4804-8a40-28f1c8372c5c
+	fromColumn: YieldByAssetByDate.DateKeyByTurn
+	toColumn: BIV_CalendarDates.DateKey
+
+relationship ff2118d2-486f-401c-8987-ac430b773e01
+	fromColumn: YieldBySiteByHour.DateKeyByTurn
+	toColumn: BIV_CalendarDates.DateKey
+
+relationship 2dc6054c-96dc-446e-81d9-0371f1c273c1
+	fromColumn: YieldByAssetByHour.DateKeyByTurn
+	toColumn: BIV_CalendarDates.DateKey
+

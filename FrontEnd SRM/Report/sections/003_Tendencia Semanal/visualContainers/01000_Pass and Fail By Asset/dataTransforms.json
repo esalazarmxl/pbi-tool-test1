@@ -1,0 +1,625 @@
+{
+  "objects": {
+    "dataPoint": [
+      {
+        "properties": {
+          "fill": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 9,
+                    "Percent": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "selector": {
+          "data": [
+            {
+              "scopeId": {
+                "Comparison": {
+                  "ComparisonKind": 0,
+                  "Left": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PassAndFailedBySite"
+                        }
+                      },
+                      "Property": "DUT_Bin_Result"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "'F'"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "properties": {
+          "fill": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#00B02F'"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "selector": {
+          "data": [
+            {
+              "scopeId": {
+                "Comparison": {
+                  "ComparisonKind": 0,
+                  "Left": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PassAndFailedBySite"
+                        }
+                      },
+                      "Property": "DUT_Bin_Result"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "'P'"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "properties": {}
+      },
+      {
+        "properties": {
+          "fill": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#D64550'"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "selector": {
+          "data": [
+            {
+              "scopeId": {
+                "Comparison": {
+                  "ComparisonKind": 0,
+                  "Left": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PassAndFailedBySite"
+                        }
+                      },
+                      "Property": "TestResult"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "'Fail'"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "properties": {
+          "fill": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#00A14E'"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "selector": {
+          "data": [
+            {
+              "scopeId": {
+                "Comparison": {
+                  "ComparisonKind": 0,
+                  "Left": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PassAndFailedBySite"
+                        }
+                      },
+                      "Property": "TestResult"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "'Pass'"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "properties": {
+          "fill": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 9,
+                    "Percent": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "CountNonNull(SRMP_RawDataSummarized.Fail)"
+        }
+      },
+      {
+        "properties": {
+          "fill": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#119E4E'"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "CountNonNull(SRMP_RawDataSummarized.Pass)"
+        }
+      },
+      {
+        "properties": {
+          "fill": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 9,
+                    "Percent": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "Sum(SRMP_RawDataSummarized.Fail)"
+        }
+      },
+      {
+        "properties": {
+          "fill": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#119E40'"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "selector": {
+          "metadata": "Sum(SRMP_RawDataSummarized.Pass)"
+        }
+      }
+    ],
+    "categoryAxis": [
+      {
+        "properties": {
+          "reverseStackOrder": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "labels": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "labelDisplayUnits": {
+            "expr": {
+              "Literal": {
+                "Value": "1D"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "zoom": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "lineStyles": [
+      {
+        "properties": {
+          "strokeWidth": {
+            "expr": {
+              "Literal": {
+                "Value": "5L"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "totals": [
+      {
+        "properties": {
+          "show": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "layout": [
+      {
+        "properties": {
+          "seriesOrderReversed": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "projectionOrdering": {
+    "Category": [
+      4,
+      0
+    ],
+    "Y": [
+      1,
+      2
+    ],
+    "Y2": [
+      3
+    ],
+    "Tooltips": [
+      5
+    ]
+  },
+  "projectionActiveItems": {
+    "Category": [
+      {
+        "queryRef": "BIV_CalendarDates.Date",
+        "suppressConcat": false
+      },
+      {
+        "queryRef": "Assets.AssetName",
+        "suppressConcat": false
+      }
+    ]
+  },
+  "splits": [
+    {
+      "selects": {
+        "0": true,
+        "1": true,
+        "2": true,
+        "4": true,
+        "5": true
+      }
+    },
+    {
+      "selects": {
+        "0": true,
+        "3": true,
+        "4": true
+      }
+    }
+  ],
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "AssetName",
+        "Name": "Assets.AssetName",
+        "Type": 2048
+      },
+      {
+        "Restatement": "Sum of Fail",
+        "Name": "Sum(SRMP_RawDataSummarized.Fail)",
+        "Type": 1,
+        "Format": "#,0"
+      },
+      {
+        "Restatement": "Sum of Pass",
+        "Name": "Sum(SRMP_RawDataSummarized.Pass)",
+        "Type": 1,
+        "Format": "#,0"
+      },
+      {
+        "Restatement": "Sum of YieldByAssetByDate",
+        "Name": "Sum(YieldByAssetByDate.YieldByAssetByDate)",
+        "Type": 1,
+        "Format": "0.00%;-0.00%;0.00%"
+      },
+      {
+        "Restatement": "Date",
+        "Name": "BIV_CalendarDates.Date",
+        "Type": 4,
+        "Format": "MM/dd/yyyy"
+      },
+      {
+        "Restatement": "Sum of TestedQuantity",
+        "Name": "CountNonNull(SRMP_RawDataSummarized.TestedQuantity)",
+        "Type": 1,
+        "Format": "#,0"
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Category",
+          "Projection": 4,
+          "isActive": true
+        },
+        {
+          "Name": "Category",
+          "Projection": 0,
+          "isActive": true
+        },
+        {
+          "Name": "Y",
+          "Projection": 1,
+          "isActive": false
+        },
+        {
+          "Name": "Y",
+          "Projection": 2,
+          "isActive": false
+        },
+        {
+          "Name": "Tooltips",
+          "Projection": 5,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "DataRoles": [
+        {
+          "Name": "Category",
+          "Projection": 4,
+          "isActive": true
+        },
+        {
+          "Name": "Category",
+          "Projection": 0,
+          "isActive": true
+        },
+        {
+          "Name": "Y2",
+          "Projection": 3,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "AssetName",
+      "queryName": "Assets.AssetName",
+      "roles": {
+        "Category": true
+      },
+      "sort": 1,
+      "sortOrder": 1,
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Assets"
+            }
+          },
+          "Property": "AssetName"
+        }
+      }
+    },
+    {
+      "displayName": "Sum of Fail",
+      "format": "#,0",
+      "queryName": "Sum(SRMP_RawDataSummarized.Fail)",
+      "roles": {
+        "Y": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "SRMP_RawDataSummarized"
+                }
+              },
+              "Property": "Fail"
+            }
+          },
+          "Function": 0
+        }
+      }
+    },
+    {
+      "displayName": "Sum of Pass",
+      "format": "#,0",
+      "queryName": "Sum(SRMP_RawDataSummarized.Pass)",
+      "roles": {
+        "Y": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "SRMP_RawDataSummarized"
+                }
+              },
+              "Property": "Pass"
+            }
+          },
+          "Function": 0
+        }
+      }
+    },
+    {
+      "displayName": "Sum of YieldByAssetByDate",
+      "format": "0.00%;-0.00%;0.00%",
+      "queryName": "Sum(YieldByAssetByDate.YieldByAssetByDate)",
+      "roles": {
+        "Y2": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "YieldByAssetByDate"
+                }
+              },
+              "Property": "YieldByAssetByDate"
+            }
+          },
+          "Function": 0
+        }
+      }
+    },
+    {
+      "displayName": "Date",
+      "format": "MM/dd/yyyy",
+      "queryName": "BIV_CalendarDates.Date",
+      "roles": {
+        "Category": true
+      },
+      "sort": 1,
+      "sortOrder": 0,
+      "type": {
+        "category": null,
+        "underlyingType": 519
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "BIV_CalendarDates"
+            }
+          },
+          "Property": "Date"
+        }
+      }
+    },
+    {
+      "displayName": "Sum of TestedQuantity",
+      "format": "#,0",
+      "queryName": "CountNonNull(SRMP_RawDataSummarized.TestedQuantity)",
+      "roles": {
+        "Tooltips": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "SRMP_RawDataSummarized"
+                }
+              },
+              "Property": "TestedQuantity"
+            }
+          },
+          "Function": 0
+        }
+      }
+    }
+  ]
+}

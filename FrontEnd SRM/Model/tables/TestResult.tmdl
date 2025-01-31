@@ -1,0 +1,21 @@
+﻿table TestResult
+
+	column TestResult
+		dataType: string
+		summarizeBy: none
+		sourceColumn: TestResult
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TestResult-350eede3-ab48-4637-a87a-10bec3fc6239 = m
+		mode: import
+		source =
+				let
+				    Source = SRMP_RawDataSummarized,
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"TestResult"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns")
+				in
+				    #"Removed Duplicates"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,289 @@
+﻿table SRMP_RawDataSummarized
+
+	column Asset
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Asset
+
+		annotation SummarizationSetBy = Automatic
+
+	column LotNumber
+		dataType: string
+		summarizeBy: none
+		sourceColumn: LotNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column PartNumber
+		dataType: string
+		summarizeBy: none
+		sourceColumn: PartNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column TestDate
+		dataType: dateTime
+		formatString: mm/dd/yyyy
+		summarizeBy: none
+		sourceColumn: TestDate
+
+		variation Variation
+			isDefault
+			relationship: cffc78a7-b799-48e9-a473-1ae713d62c90
+			defaultHierarchy: LocalDateTable_bfc937ae-0af3-43de-87c5-684d86ad07d8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		summarizeBy: count
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column TestHour
+		dataType: dateTime
+		formatString: Long Time
+		summarizeBy: none
+		sourceColumn: TestHour
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column ShiftGoal
+		dataType: int64
+		formatString: #,0
+		summarizeBy: none
+		sourceColumn: ShiftGoal
+
+		annotation SummarizationSetBy = User
+
+	column TestedQuantity
+		dataType: double
+		formatString: #,0
+		summarizeBy: none
+		sourceColumn: TestedQuantity
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column Pass
+		dataType: double
+		formatString: #,0
+		summarizeBy: none
+		sourceColumn: Pass
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column Fail
+		dataType: double
+		formatString: #,0
+		summarizeBy: none
+		sourceColumn: Fail
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column Goal
+		dataType: int64
+		formatString: #,0
+		summarizeBy: none
+		sourceColumn: Goal
+
+		annotation SummarizationSetBy = User
+
+	column Prod
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Prod
+
+		annotation SummarizationSetBy = Automatic
+
+	column week
+		dataType: string
+		summarizeBy: none
+		sourceColumn: week
+
+		annotation SummarizationSetBy = Automatic
+
+	column TesterType
+		dataType: string
+		summarizeBy: none
+		sourceColumn: TesterType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Site
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: Site
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ecode
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Ecode
+
+		annotation SummarizationSetBy = Automatic
+
+	column TestResult
+		dataType: string
+		summarizeBy: none
+		sourceColumn: TestResult
+
+		annotation SummarizationSetBy = Automatic
+
+	column Shift
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Shift
+
+		annotation SummarizationSetBy = Automatic
+
+	column TestMode
+		dataType: string
+		summarizeBy: none
+		sourceColumn: TestMode
+
+		annotation SummarizationSetBy = Automatic
+
+	column YieldBySiteByHour
+		dataType: double
+		summarizeBy: sum
+		sourceColumn: YieldBySiteByHour
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column YieldBySiteByDate
+		dataType: double
+		summarizeBy: sum
+		sourceColumn: YieldBySiteByDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column YieldByAssetByHour
+		dataType: double
+		summarizeBy: sum
+		sourceColumn: YieldByAssetByHour
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column YieldByAssetByDate
+		dataType: double
+		summarizeBy: sum
+		sourceColumn: YieldByAssetByDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Active
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		summarizeBy: none
+		sourceColumn: Active
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedOn
+		dataType: dateTime
+		formatString: General Date
+		summarizeBy: none
+		sourceColumn: CreatedOn
+
+		variation Variation
+			isDefault
+			relationship: 70b40b61-93a5-476a-86d1-334bcd3cecbc
+			defaultHierarchy: LocalDateTable_bcd2e266-8e16-42c6-bb24-2b21b7029177.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedBy
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CreatedBy
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedOn
+		dataType: dateTime
+		formatString: General Date
+		summarizeBy: none
+		sourceColumn: UpdatedOn
+
+		variation Variation
+			isDefault
+			relationship: 612c4231-240a-4af1-9fe8-ef1d3f2b1916
+			defaultHierarchy: LocalDateTable_fd7f0bec-f4c0-4db2-bfe4-1a84398b70de.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpdatedBy
+		dataType: string
+		summarizeBy: none
+		sourceColumn: UpdatedBy
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateByTurn
+		dataType: dateTime
+		formatString: mm/dd/yy
+		summarizeBy: none
+		sourceColumn: DateByTurn
+
+		variation Variation
+			isDefault
+			relationship: 1e4d233a-b725-479e-ae90-1dc4a3d0c519
+			defaultHierarchy: LocalDateTable_4bc8e1ed-e634-4f5e-a580-501a48933c87.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column DateKeyByTurn
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: DateKeyByTurn
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderHour
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: OrderHour
+
+		annotation SummarizationSetBy = User
+
+	partition SRMP_RawDataSummarized-b93ee0ac-e628-4e00-bee7-1e8bad0d3cb3 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("Memexpsql08", "Engineering"),
+				    dbo_SRMP_RawDataSummarized = Source{[Schema="dbo",Item="SRMP_RawDataSummarized"]}[Data]
+				in
+				    dbo_SRMP_RawDataSummarized
+
+	annotation PBI_ResultType = Table
+

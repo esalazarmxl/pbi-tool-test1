@@ -1,0 +1,53 @@
+{
+  "name": "5853cb7483444b715440",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 560.13801035077631,
+        "y": 0.73605520414031045,
+        "z": 16000,
+        "width": 40.483036227717079,
+        "height": 39.746981023576765,
+        "tabOrder": 8000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "image",
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "imageUrl": {
+              "expr": {
+                "ResourcePackageItem": {
+                  "PackageName": "RegisteredResources",
+                  "PackageType": 1,
+                  "ItemName": "publishing_(3)8547098148009573.png"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "a9ee8db661a88069cc7a"
+}

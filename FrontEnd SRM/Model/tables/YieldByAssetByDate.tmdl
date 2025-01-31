@@ -1,0 +1,52 @@
+﻿table YieldByAssetByDate
+
+	column YieldByAssetByDate
+		dataType: double
+		formatString: 0.00%;-0.00%;0.00%
+		summarizeBy: none
+		sourceColumn: YieldByAssetByDate
+
+		annotation SummarizationSetBy = User
+
+	column Asset
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Asset
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateByTurn
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: DateByTurn
+
+		variation Variation
+			isDefault
+			relationship: 99bb7e40-6f75-4ea2-baf4-fc9894bf2981
+			defaultHierarchy: LocalDateTable_27ecb91d-283a-4a42-b0c2-f085e22b4043.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DateKeyByTurn
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: DateKeyByTurn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition YieldByAssetByDate-fa752008-2661-4a64-b4e5-c79dc63e9f2b = m
+		mode: import
+		source =
+				let
+				    Source = SRMP_RawDataSummarized,
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"YieldByAssetByDate", "Asset", "DateByTurn", "DateKeyByTurn"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns")
+				in
+				    #"Removed Duplicates"
+
+	annotation PBI_ResultType = Table
+

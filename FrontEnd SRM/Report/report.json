@@ -1,0 +1,117 @@
+{
+  "id": 0,
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "ReportSection0c0305aa6397700b9d16",
+      "config": "{}",
+      "name": "Pod4"
+    },
+    {
+      "boundSection": "ReportSection3220b740100d09be22aa",
+      "config": "{\"acceptsFilterContext\":1}",
+      "name": "Pod5",
+      "parameters": "[{\"name\":\"Param_Filterf275158de050b629b287\",\"boundFilter\":\"Filterf275158de050b629b287\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Assets\"}},\"Property\":\"AssetName\"}}},{\"name\":\"Param_Filter1190d7abb07c162d052b\",\"boundFilter\":\"Filter1190d7abb07c162d052b\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Site\"}},\"Property\":\"Site\"}}},{\"name\":\"Param_Filterae40ee0050d0ca9205ac\",\"boundFilter\":\"Filterae40ee0050d0ca9205ac\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"BIV_CalendarDates\"}},\"Property\":\"Date\"}}}]",
+      "type": 1
+    },
+    {
+      "boundSection": "ReportSection2fc4ec3f021b0a0d0001",
+      "config": "{\"acceptsFilterContext\":1}",
+      "name": "Pod6",
+      "parameters": "[{\"name\":\"Param_Filterc2e160672ca64c9a6e0d\",\"boundFilter\":\"Filterc2e160672ca64c9a6e0d\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Assets\"}},\"Property\":\"AssetName\"}}},{\"name\":\"Param_Filterac5dc88d9f053b92a614\",\"boundFilter\":\"Filterac5dc88d9f053b92a614\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DayHours\"}},\"Property\":\"Hour\"}}},{\"name\":\"Param_Filter3a1ae58571143cbe2059\",\"boundFilter\":\"Filter3a1ae58571143cbe2059\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"BIV_CalendarDates\"}},\"Property\":\"Date\"}}}]",
+      "type": 1
+    },
+    {
+      "boundSection": "ReportSection397239bb8fe6985254a6",
+      "config": "{\"acceptsFilterContext\":1}",
+      "name": "Pod"
+    },
+    {
+      "boundSection": "ReportSectione52e25f78b6ddacca3e5",
+      "config": "{}",
+      "name": "Pod1"
+    },
+    {
+      "boundSection": "ReportSectionbb2a6efed90929d90631",
+      "config": "{\"acceptsFilterContext\":1}",
+      "name": "Pod10",
+      "parameters": "[{\"name\":\"Param_Filterc2e160672ca64c9a6e0d\",\"boundFilter\":\"Filterc2e160672ca64c9a6e0d\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Assets\"}},\"Property\":\"AssetName\"}}},{\"name\":\"Param_Filterac5dc88d9f053b92a614\",\"boundFilter\":\"Filterac5dc88d9f053b92a614\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DayHours\"}},\"Property\":\"Hour\"}}},{\"name\":\"Param_Filterb1ac2fdc4e073805c8dc\",\"boundFilter\":\"Filterb1ac2fdc4e073805c8dc\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Site\"}},\"Property\":\"Site\"}}},{\"name\":\"Param_Filterd04effafe5690beb605b\",\"boundFilter\":\"Filterd04effafe5690beb605b\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"BIV_CalendarDates\"}},\"Property\":\"Date\"}}}]",
+      "type": 1
+    },
+    {
+      "boundSection": "ReportSectiondcccaaf50ce1106ee4dd",
+      "config": "{\"acceptsFilterContext\":1}",
+      "name": "Pod2"
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY21SU04",
+            "path": "BaseThemes/CY21SU04.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "Logo8171124185132799.png",
+            "path": "Logo8171124185132799.png",
+            "type": 100
+          },
+          {
+            "name": "Dark_Cover_Background_-_Copy3983858085497025.png",
+            "path": "Dark_Cover_Background_-_Copy3983858085497025.png",
+            "type": 100
+          },
+          {
+            "name": "Theme49964677592007785.png",
+            "path": "Theme49964677592007785.png",
+            "type": 100
+          },
+          {
+            "name": "sync_(1)9688352816205774.png",
+            "path": "sync_(1)9688352816205774.png",
+            "type": 100
+          },
+          {
+            "name": "shooting-range29814007003791687.png",
+            "path": "shooting-range29814007003791687.png",
+            "type": 100
+          },
+          {
+            "name": "brochure1678166664964833.png",
+            "path": "brochure1678166664964833.png",
+            "type": 100
+          },
+          {
+            "name": "publishing_(3)8547098148009573.png",
+            "path": "publishing_(3)8547098148009573.png",
+            "type": 100
+          },
+          {
+            "name": "alert4056360935089427.png",
+            "path": "alert4056360935089427.png",
+            "type": 100
+          },
+          {
+            "name": "speedometer2036623139272331.png",
+            "path": "speedometer2036623139272331.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ]
+}

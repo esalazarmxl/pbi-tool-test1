@@ -1,0 +1,53 @@
+{
+  "name": "57ec0db0671b40d8cb9d",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 30.629558056653433,
+        "width": 39.993369030690275,
+        "x": 595.83744751128825,
+        "y": 1.9752162730886131,
+        "z": 9500,
+        "tabOrder": 12000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "image",
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "imageUrl": {
+              "expr": {
+                "ResourcePackageItem": {
+                  "PackageName": "RegisteredResources",
+                  "PackageType": 1,
+                  "ItemName": "speedometer2036623139272331.png"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "d1a35ef18a20b7684ad9"
+}

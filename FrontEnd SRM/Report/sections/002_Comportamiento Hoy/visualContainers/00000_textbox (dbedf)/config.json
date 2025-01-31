@@ -1,0 +1,81 @@
+{
+  "name": "dbedfdaa4c5ac2e6029d",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 44.413214714607911,
+        "width": 1280.3897685749087,
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "tabOrder": 0
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "textbox",
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Asset:",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Segoe (Bold)",
+                      "fontSize": "13.3333px",
+                      "color": "#808080"
+                    }
+                  },
+                  {
+                    "value": "\t\t\t\t\t\t\t\t\t\t ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "color": "#808080"
+                    }
+                  },
+                  {
+                    "value": "\t\t\t\t\t\t\t\t"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "e6abacfa88cda0200a4d"
+}

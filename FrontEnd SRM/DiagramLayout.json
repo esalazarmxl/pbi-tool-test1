@@ -1,0 +1,226 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 72.261770182180143,
+        "y": 23.59619264410594
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 991.22683178243074,
+            "y": 28.413804231969586
+          },
+          "nodeIndex": "SRMP_DailyGoalLog",
+          "size": {
+            "height": 395.15194866177774,
+            "width": 230.5524390243902
+          },
+          "zIndex": 14
+        },
+        {
+          "location": {
+            "x": 316.88703203728971,
+            "y": 1109.2711925729361
+          },
+          "nodeIndex": "Assets",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "DayHours",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 15
+        },
+        {
+          "location": {
+            "x": 1292.2595907956434,
+            "y": 27.273261736826612
+          },
+          "nodeIndex": "BIV_Bridge4DimDate",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 1292.0017844684883,
+            "y": 213.44344630479981
+          },
+          "nodeIndex": "BIV_DimDateFilter",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 320.490930469473,
+            "y": 210.5537116905505
+          },
+          "nodeIndex": "SRMP_RawDataSummarized",
+          "size": {
+            "height": 833.941161185376,
+            "width": 234
+          },
+          "zIndex": 17
+        },
+        {
+          "location": {
+            "x": 695.40611426929638,
+            "y": 657.06688088595808
+          },
+          "nodeIndex": "Site",
+          "size": {
+            "height": 124,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 1.090930469473065,
+            "y": 184.20816029108045
+          },
+          "nodeIndex": "TesterType",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 466.74299601059766
+          },
+          "nodeIndex": "TestResult",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 333.6
+          },
+          "nodeIndex": "Shift",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 16
+        },
+        {
+          "location": {
+            "x": 1594.7254488886922,
+            "y": 493.38893005924012
+          },
+          "nodeIndex": "YieldByAssetByDate",
+          "size": {
+            "height": 189.09116563367678,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1631.6076156658742,
+            "y": 734.15917502671073
+          },
+          "nodeIndex": "YieldByAssetByHour",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1280.7689024390243,
+            "y": 494.65853658536582
+          },
+          "nodeIndex": "YieldBySiteByDate",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1286.9460270579268,
+            "y": 746.39695121951229
+          },
+          "nodeIndex": "YieldBySiteByHour",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 1619.6158536585365,
+            "y": 29.304268292682927
+          },
+          "nodeIndex": "ShiftHours",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 2000.5201219512196,
+            "y": 34.475609756097569
+          },
+          "nodeIndex": "BIV_CalendarDates",
+          "size": {
+            "height": 544.77682926829266,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 644.69390243902433
+          },
+          "nodeIndex": "ProdType",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 1
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 65.04130729361826,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

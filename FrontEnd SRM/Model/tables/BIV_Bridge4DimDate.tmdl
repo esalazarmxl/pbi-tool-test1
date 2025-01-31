@@ -1,0 +1,29 @@
+﻿table BIV_Bridge4DimDate
+
+	column _PeriodKey
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: _PeriodKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	partition BIV_Bridge4DimDate-f854d065-4854-4816-ac53-1e2ea58be465 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("memexpsql08", "Engineering"),
+				    dbo_BIV_Bridge4DimDate = Source{[Schema="dbo",Item="BIV_Bridge4DimDate"]}[Data]
+				in
+				    dbo_BIV_Bridge4DimDate
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,39 @@
+<LinguisticSchema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Language="en-US" DynamicImprovement="Default" xmlns="http://schemas.microsoft.com/sqlserver/2016/01/linguisticschema">
+  <Entities>
+    <Entity Name="Buenas_y_Malas_por_Maquina_por_Hora" ConceptualEntity="Pod6" Source="Generated">
+      <Words>
+        <Word>Buenas y Malas por Maquina por Hora</Word>
+      </Words>
+    </Entity>
+    <Entity Name="Tendencia_Semanal" ConceptualEntity="Pod4" Source="Generated">
+      <Words>
+        <Word>Tendencia Semanal</Word>
+      </Words>
+    </Entity>
+    <Entity Name="Buenas_y_Malas_por_Sitio" ConceptualEntity="Pod5" Source="Generated">
+      <Words>
+        <Word>Buenas y Malas por Sitio</Word>
+      </Words>
+    </Entity>
+    <Entity Name="Comportamiento_Hoy_Equipo_Específico" ConceptualEntity="Pod" Source="Generated">
+      <Words>
+        <Word>Comportamiento Hoy Equipo Específico</Word>
+      </Words>
+    </Entity>
+    <Entity Name="Buenas_y_Malas_por_Sitio_por_Hora" ConceptualEntity="Pod10" Source="Generated">
+      <Words>
+        <Word>Buenas y Malas por Sitio por Hora</Word>
+      </Words>
+    </Entity>
+    <Entity Name="Raw_Data" ConceptualEntity="Pod1" Source="Generated">
+      <Words>
+        <Word>Raw Data</Word>
+      </Words>
+    </Entity>
+    <Entity Name="Comportamiento_Hoy" ConceptualEntity="Pod2" Source="Generated">
+      <Words>
+        <Word>Comportamiento Hoy</Word>
+      </Words>
+    </Entity>
+  </Entities>
+</LinguisticSchema>

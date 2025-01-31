@@ -1,0 +1,37 @@
+{
+  "name": "c7245b2051304b375dcd",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 1208.4774665042632,
+        "y": 0,
+        "z": 4000,
+        "width": 71.912302070645552,
+        "height": 35.079171741778318,
+        "tabOrder": 4000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "image",
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "imageUrl": {
+              "expr": {
+                "ResourcePackageItem": {
+                  "PackageName": "RegisteredResources",
+                  "PackageType": 1,
+                  "ItemName": "Logo8171124185132799.png"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

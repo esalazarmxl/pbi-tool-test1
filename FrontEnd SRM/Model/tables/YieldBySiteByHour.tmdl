@@ -1,0 +1,70 @@
+﻿table YieldBySiteByHour
+
+	column YieldBySiteByHour
+		dataType: double
+		formatString: 0.00%;-0.00%;0.00%
+		summarizeBy: none
+		sourceColumn: YieldBySiteByHour
+
+		annotation SummarizationSetBy = User
+
+	column Site
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: Site
+
+		annotation SummarizationSetBy = Automatic
+
+	column Asset
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Asset
+
+		annotation SummarizationSetBy = Automatic
+
+	column TestHour
+		dataType: dateTime
+		formatString: Long Time
+		summarizeBy: none
+		sourceColumn: TestHour
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column DateByTurn
+		dataType: dateTime
+		formatString: Long Date
+		summarizeBy: none
+		sourceColumn: DateByTurn
+
+		variation Variation
+			isDefault
+			relationship: beca4821-6b9f-4727-a0c3-646379d69cc0
+			defaultHierarchy: LocalDateTable_4f620a39-c6d5-4101-a4b5-7252c0bf4669.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DateKeyByTurn
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: DateKeyByTurn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition YieldBySiteByHour-a109ab1e-caa1-46a8-9fb8-46e5f7175b07 = m
+		mode: import
+		source =
+				let
+				    Source = SRMP_RawDataSummarized,
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"YieldBySiteByHour", "Site", "Asset", "DateByTurn", "DateKeyByTurn", "TestHour"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns")
+				in
+				    #"Removed Duplicates"
+
+	annotation PBI_ResultType = Table
+

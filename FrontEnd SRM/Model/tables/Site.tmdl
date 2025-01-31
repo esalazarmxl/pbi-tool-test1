@@ -1,0 +1,30 @@
+﻿table Site
+
+	column Site
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: Site
+
+		annotation SummarizationSetBy = Automatic
+
+	column SiteName = ```
+			CONCATENATE("Site ", Site[Site]) 
+			```
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Site-3062ebc4-63f5-4721-b4b2-11f1ede915d1 = m
+		mode: import
+		source =
+				let
+				    Source = SRMP_RawDataSummarized,
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"Site"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns"),
+				    #"Sorted Rows" = Table.Sort(#"Removed Duplicates",{{"Site", Order.Ascending}})
+				in
+				    #"Sorted Rows"
+
+	annotation PBI_ResultType = Table
+

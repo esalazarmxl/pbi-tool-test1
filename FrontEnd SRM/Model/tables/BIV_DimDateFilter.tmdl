@@ -1,0 +1,35 @@
+﻿table BIV_DimDateFilter
+
+	column _PeriodKey
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: _PeriodKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Period
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Period
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeZone
+		dataType: string
+		summarizeBy: none
+		sourceColumn: TimeZone
+
+		annotation SummarizationSetBy = Automatic
+
+	partition BIV_DimDateFilter-cf2ff01c-1936-44e1-ae36-905d1520eccf = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("memexpsql08", "Engineering"),
+				    dbo_BIV_DimDateFilter = Source{[Schema="dbo",Item="BIV_DimDateFilter"]}[Data]
+				in
+				    dbo_BIV_DimDateFilter
+
+	annotation PBI_ResultType = Table
+

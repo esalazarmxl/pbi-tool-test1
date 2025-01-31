@@ -1,0 +1,92 @@
+{
+  "name": "47cdba3853bdb681689f",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 40.634920634920633,
+        "width": 1280,
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "tabOrder": 0
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "textbox",
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Asset:\t\t\t\t\t\t\t\t\t   Sitio:\t\t\t\t\tTipo Tester:\t\t\t\t\t\t\t\tFecha:\t\t\t\t\t\t\t\t\t\tPeriodo:\t\t\t\t\t\t\t\t\t  ",
+                    "textStyle": {
+                      "fontFamily": "Segoe (Bold)",
+                      "fontSize": "13.3333px",
+                      "color": "#808080"
+                    }
+                  },
+                  {
+                    "value": "\t"
+                  },
+                  {
+                    "value": "Turno: ",
+                    "textStyle": {
+                      "fontFamily": "Segoe (Bold)",
+                      "fontSize": "13.3333px",
+                      "color": "#808080"
+                    }
+                  },
+                  {
+                    "value": "\t\t\t\t\t\t\t\t\t"
+                  },
+                  {
+                    "value": "Prod Type: \t\t\t\t\t\t\t ",
+                    "textStyle": {
+                      "fontFamily": "Segoe (Bold)",
+                      "fontSize": "13.3333px",
+                      "color": "#808080"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "d8ea23ef255dc21c891e"
+}

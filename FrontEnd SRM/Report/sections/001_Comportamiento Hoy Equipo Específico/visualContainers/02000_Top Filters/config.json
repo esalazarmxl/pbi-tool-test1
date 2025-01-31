@@ -1,0 +1,20 @@
+{
+  "name": "1261d7eeeadd51f28082",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 0,
+        "y": 45.602923264311819,
+        "z": 0,
+        "width": 1280.3897685749087,
+        "height": 44.413214714607911,
+        "tabOrder": 2000
+      }
+    }
+  ],
+  "singleVisualGroup": {
+    "displayName": "Top Filters",
+    "groupMode": 0
+  }
+}

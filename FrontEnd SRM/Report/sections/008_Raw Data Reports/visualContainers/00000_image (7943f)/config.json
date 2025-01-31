@@ -1,0 +1,53 @@
+{
+  "name": "7943f07d6caeda671b67",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "height": 37.986803624118231,
+        "width": 39.537933234224873,
+        "x": 1072.1758113531603,
+        "y": 6.75799915549125,
+        "z": 16500,
+        "tabOrder": 0
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "image",
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "imageUrl": {
+              "expr": {
+                "ResourcePackageItem": {
+                  "PackageName": "RegisteredResources",
+                  "PackageType": 1,
+                  "ItemName": "brochure1678166664964833.png"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "parentGroupName": "ff4ec1bf6444eb199124"
+}

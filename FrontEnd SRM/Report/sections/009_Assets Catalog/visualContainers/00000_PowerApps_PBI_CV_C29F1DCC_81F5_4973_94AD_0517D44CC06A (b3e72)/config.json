@@ -1,0 +1,65 @@
+{
+  "name": "b3e720dbe155ae19c993",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 22.140221402214021,
+        "y": 0,
+        "z": 0,
+        "width": 377.26937269372695,
+        "height": 720
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "PowerApps_PBI_CV_C29F1DCC_81F5_4973_94AD_0517D44CC06A",
+    "projections": {
+      "table": [
+        {
+          "queryRef": "Assets.Asset"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "a",
+          "Entity": "Assets",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "a"
+              }
+            },
+            "Property": "Asset"
+          },
+          "Name": "Assets.Asset",
+          "NativeReferenceName": "Asset"
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "appId": {
+              "expr": {
+                "Literal": {
+                  "Value": "'/providers/Microsoft.PowerApps/apps/1fc18251-ab1c-42f7-acb3-616d351059e0'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
