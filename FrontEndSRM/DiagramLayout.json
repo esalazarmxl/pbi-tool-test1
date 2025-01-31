@@ -4,8 +4,8 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 72.261770182180143,
-        "y": 23.59619264410594
+        "x": 0,
+        "y": 75.336739126102714
       },
       "nodes": [
         {
@@ -18,7 +18,7 @@
             "height": 395.15194866177774,
             "width": 230.5524390243902
           },
-          "zIndex": 14
+          "zIndex": 13
         },
         {
           "location": {
@@ -30,7 +30,7 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 13
+          "zIndex": 12
         },
         {
           "location": {
@@ -42,19 +42,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 15
-        },
-        {
-          "location": {
-            "x": 1292.2595907956434,
-            "y": 27.273261736826612
-          },
-          "nodeIndex": "BIV_Bridge4DimDate",
-          "size": {
-            "height": 128,
-            "width": 234
-          },
-          "zIndex": 9
+          "zIndex": 16
         },
         {
           "location": {
@@ -66,7 +54,7 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 10
+          "zIndex": 9
         },
         {
           "location": {
@@ -78,7 +66,7 @@
             "height": 833.941161185376,
             "width": 234
           },
-          "zIndex": 17
+          "zIndex": 15
         },
         {
           "location": {
@@ -90,7 +78,7 @@
             "height": 124,
             "width": 234
           },
-          "zIndex": 11
+          "zIndex": 10
         },
         {
           "location": {
@@ -126,7 +114,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 16
+          "zIndex": 14
         },
         {
           "location": {
@@ -198,7 +186,7 @@
             "height": 544.77682926829266,
             "width": 234
           },
-          "zIndex": 12
+          "zIndex": 11
         },
         {
           "location": {
@@ -211,6 +199,18 @@
             "width": 234
           },
           "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1292.2595907956434,
+            "y": 27.273261736826612
+          },
+          "nodeIndex": "BIV_Bridge",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",

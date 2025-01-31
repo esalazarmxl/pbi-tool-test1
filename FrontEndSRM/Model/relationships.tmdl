@@ -13,7 +13,7 @@ relationship ab5e65f6-5349-4e9e-b804-fda8920fefa8
 	toColumn: LocalDateTable_82da22bf-db83-4241-ab72-ad09a4ff4ba6.Date
 
 relationship eedf163c-0ab8-44e1-aaf2-fe1f5ee5f7e7
-	fromColumn: BIV_Bridge4DimDate._PeriodKey
+	fromColumn: BIV_Bridge._PeriodKey
 	toColumn: BIV_DimDateFilter._PeriodKey
 
 relationship cffc78a7-b799-48e9-a473-1ae713d62c90
@@ -26,6 +26,7 @@ relationship 38a39250-62e2-4c35-9e67-b9e681c5d195
 	toColumn: Assets.Asset
 
 relationship 0f4c058a-9a01-4c72-b0ea-31e516ebd525
+	isActive: false
 	fromColumn: SRMP_RawDataSummarized.TestHour
 	toColumn: DayHours.Hour
 
@@ -131,7 +132,7 @@ relationship fcbb2cd0-8980-45ad-9f54-7e812940224e
 
 relationship 0f27b257-982b-4e02-bcca-b0c6e0951ffa
 	crossFilteringBehavior: bothDirections
-	fromColumn: BIV_Bridge4DimDate.DateKey
+	fromColumn: BIV_Bridge.DateKey
 	toColumn: BIV_CalendarDates.DateKey
 
 relationship d7354894-761c-4d51-90e2-48da9c3b82c2

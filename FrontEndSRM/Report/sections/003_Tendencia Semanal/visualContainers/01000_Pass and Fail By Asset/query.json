@@ -29,6 +29,11 @@
               "Name": "b1",
               "Entity": "BIV_DimDateFilter",
               "Type": 0
+            },
+            {
+              "Name": "s1",
+              "Entity": "Shift",
+              "Type": 0
             }
           ],
           "Select": [
@@ -146,6 +151,33 @@
                       {
                         "Literal": {
                           "Value": "'This Week'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            },
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "s1"
+                          }
+                        },
+                        "Property": "Shift"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'First'"
                         }
                       }
                     ]

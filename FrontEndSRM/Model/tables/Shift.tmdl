@@ -1,5 +1,8 @@
 ﻿table Shift
 
+	measure Measure = 1
+		formatString: 0
+
 	column Shift
 		dataType: string
 		summarizeBy: none

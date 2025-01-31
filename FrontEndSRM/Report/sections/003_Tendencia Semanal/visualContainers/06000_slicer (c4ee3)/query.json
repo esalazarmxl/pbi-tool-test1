@@ -9,6 +9,11 @@
               "Name": "b",
               "Entity": "BIV_DimDateFilter",
               "Type": 0
+            },
+            {
+              "Name": "s",
+              "Entity": "Shift",
+              "Type": 0
             }
           ],
           "Select": [
@@ -23,6 +28,35 @@
               },
               "Name": "BIV_DimDateFilter.Period",
               "NativeReferenceName": "Period"
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "s"
+                          }
+                        },
+                        "Property": "Shift"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'First'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
             }
           ]
         },

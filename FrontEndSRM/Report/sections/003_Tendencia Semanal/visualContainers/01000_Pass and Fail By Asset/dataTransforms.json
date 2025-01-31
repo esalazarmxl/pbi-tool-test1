@@ -413,6 +413,106 @@
         "Type": 1,
         "Format": "#,0"
       }
+    ],
+    "Filters": [
+      {
+        "type": 0,
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Assets"
+              }
+            },
+            "Property": "AssetName"
+          }
+        }
+      },
+      {
+        "type": 2,
+        "expression": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "SRMP_RawDataSummarized"
+                  }
+                },
+                "Property": "Fail"
+              }
+            },
+            "Function": 0
+          }
+        }
+      },
+      {
+        "type": 2,
+        "expression": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "SRMP_RawDataSummarized"
+                  }
+                },
+                "Property": "Pass"
+              }
+            },
+            "Function": 0
+          }
+        }
+      },
+      {
+        "type": 2,
+        "expression": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "YieldByAssetByDate"
+                  }
+                },
+                "Property": "YieldByAssetByDate"
+              }
+            },
+            "Function": 0
+          }
+        }
+      },
+      {
+        "type": 0,
+        "expression": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BIV_CalendarDates"
+              }
+            },
+            "Property": "Date"
+          }
+        }
+      },
+      {
+        "type": 2,
+        "expression": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "SRMP_RawDataSummarized"
+                  }
+                },
+                "Property": "TestedQuantity"
+              }
+            },
+            "Function": 0
+          }
+        }
+      }
     ]
   },
   "visualElements": [
